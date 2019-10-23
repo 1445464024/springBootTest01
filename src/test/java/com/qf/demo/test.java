@@ -18,5 +18,6 @@ public class test {
         System.out.println("a--->"+a);
         a = new String("eee");
         System.out.println("a--->"+a);
+        //heiheihei
     }
 }
