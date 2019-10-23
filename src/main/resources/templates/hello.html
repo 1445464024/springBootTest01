@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    模板页面！！！<br/>
+    <span th:text="aaa+${tUser.name}">VIP</span><br/>
+    <!--<span th:text="aaa${tUser.name}">VIP</span><br/>-->
+    <span th:text="|bbb,${tUser.name}|">VIP</span><br/>
+
+    <span th:if="${money>50000}">有钱</span><br/>
+    <!--<span th:if="${money<50000}">没钱</span>-->
+    <span th:unless="${money>50000}" th:text="真de没钱"></span><br/>
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>姓名</td>
+        </tr>
+        <tr th:each="user : ${list}">
+            <td th:text="${user.id}">id</td>
+            <td th:text="${user.name}">姓名</td>
+        </tr>
+    </table><br/>
+
+    <input th:value="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"/><br/>
+
+
+</body>
+</html>

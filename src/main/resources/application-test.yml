@@ -1,0 +1,8 @@
+#当你对默认的配置需要更改时，就需要在这里面做配置
+
+resource:
+  imageServer: http://testimage3
+  emailServer: http://testemail3
+spring:
+  profiles:
+    active: dev
